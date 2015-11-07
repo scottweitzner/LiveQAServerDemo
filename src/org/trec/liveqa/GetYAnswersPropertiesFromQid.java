@@ -126,17 +126,28 @@ public class GetYAnswersPropertiesFromQid {
             return;
         }
         
-        BufferedWriter writer = getWriter(args[1]);        
+        BufferedWriter writer = getWriter(args[1]);
         String[] qids = getQids(args[0]);
+
+        writer.append("qid,");
+        writer.append("question,");
+        writer.append("category,");
+        writer.append("body,");
+        writer.append("date");
 
         for (String qid : qids) {
             System.out.println("Getting data for QID " + qid);
-            writer.append(qid + ":");
-            writer.newLine();
-            for (Entry<String, String> kv : extractData(qid).entrySet()) {
-                writer.append(kv.getKey() + "\t" + kv.getValue());
-                writer.newLine();
+            writer.append("\"" + qid + "\"");
+            Map<String, String> qData = extractData(qid);
+            int count = 0;
+            for (Entry<String, String> kv : qData.entrySet()) {
+                if( count != 0 && kv.getValue().length() > 1 ){
+                    writer.append(",");
+                    writer.append("\"" + kv.getValue().replace("\"", "\\\"") + "\"");
+                }
+                count++;
             }
+            count = 0;
             writer.newLine();
         }
         writer.flush();
@@ -201,7 +212,7 @@ public class GetYAnswersPropertiesFromQid {
             res.put("Body", findElementText(head, cb));
 
             // get best answer
-            // res.put("Best Answer", findElementText(body, cba));
+            res.put("Best Answer", findElementText(body, cba));
 
             responseBody.close();
 
