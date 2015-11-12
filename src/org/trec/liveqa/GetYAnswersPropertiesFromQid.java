@@ -133,7 +133,7 @@ public class GetYAnswersPropertiesFromQid {
         writer.append("question,");
         writer.append("category,");
         writer.append("body,");
-        writer.append("date");
+        writer.append("date"); writer.newLine();
 
         for (String qid : qids) {
             System.out.println("Getting data for QID " + qid);
