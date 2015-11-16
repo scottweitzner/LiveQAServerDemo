@@ -85,14 +85,15 @@ public class GetYAnswersPropertiesFromQid {
 
         @Override
         public boolean check(Element e) {
-            // implement your own...
-            return false;
+            Boolean answer = e.nodeName().equals("div") && e.hasClass("answer-detail");
+            if (answer) return answer;
+            return e.nodeName().equals("span") && e.hasClass("ya-q-full-text");
+
         }
 
         @Override
         public String getText(Element e) {
-            // implement your own...
-            return null;
+            return e.text();
         }
 
     }
@@ -118,7 +119,7 @@ public class GetYAnswersPropertiesFromQid {
     private static CheckTitle ct = new CheckTitle();
     private static CheckBody cb = new CheckBody();
     private static CheckTopLevelCategory cc = new CheckTopLevelCategory();
-    private static CheckBestAnswer cba = new CheckBestAnswer(); // not implemented
+    private static CheckBestAnswer cba = new CheckBestAnswer();
 
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
@@ -130,24 +131,25 @@ public class GetYAnswersPropertiesFromQid {
         String[] qids = getQids(args[0]);
 
         writer.append("qid,");
+        writer.append("answer,");
         writer.append("question,");
         writer.append("category,");
-        writer.append("body,");
+        writer.append("body,");;
         writer.append("date"); writer.newLine();
 
         for (String qid : qids) {
             System.out.println("Getting data for QID " + qid);
             writer.append("\"" + qid + "\"");
             Map<String, String> qData = extractData(qid);
+            //System.out.println(qData.toString());
             int count = 0;
             for (Entry<String, String> kv : qData.entrySet()) {
-                if( count != 0 && kv.getValue().length() > 1 ){
+                if( count != qData.size() ){
                     writer.append(",");
-                    writer.append("\"" + kv.getValue().replace("\"", "\\\"") + "\"");
                 }
+                writer.append("\"" + kv.getValue().replace("\"", "\\\"") + "\"");
                 count++;
             }
-            count = 0;
             writer.newLine();
         }
         writer.flush();
@@ -208,11 +210,11 @@ public class GetYAnswersPropertiesFromQid {
             // get title
             res.put("Title", findElementText(head, ct));
 
-            // get body
+            //get body
             res.put("Body", findElementText(head, cb));
 
-            // get best answer
-            res.put("Best Answer", findElementText(body, cba));
+            // get answer
+            res.put("Answer", findElementText(body, cba));
 
             responseBody.close();
 
@@ -225,7 +227,6 @@ public class GetYAnswersPropertiesFromQid {
         } finally {
             method.releaseConnection();
         }
-
         return res;
     }
 

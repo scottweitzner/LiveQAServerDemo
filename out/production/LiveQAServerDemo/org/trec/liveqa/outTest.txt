@@ -1,18 +1,2 @@
-qid,question,category,body,date"20150607050538AAdu0al	","My eyelid is swelling!?","Health","No idea why. I was taking a shower 2 days ago and water had trickled into my eye. I wiped it and rinsed  it, but it been sore ever since on the outer corner of my left eye! It doesn&#39;t feel like anything is in it, or mucusy or full. Just sore. My outer eye socket is also sore. My actual eye is completely normal, not blood shot or anything.","Sun Jun 07 05:05:38 EDT 2015"
-"20150607051002AAavN98	","Is the chestnut mare stereotype true?","Pets","I have been looking around for a horse for the last while and I found a beautiful 16.2hh chestnut mare thoroughbred cross called Dandi and when I spoke to the owner of the yard I ride at he said they are known for being a little off especially if they have thoroughbred blood I dont know if this stereotype is real I cant find anything with good advise also the only chestnut mare in the yard is a psycho so Im hoping that she is a once off.","Sun Jun 07 05:10:02 EDT 2015"
-"20150607051211AAZ4J6H	","Poem about how ones lifestyle can affect the functioning of the respiratory abd circulatory system?","Arts & Humanities","Sun Jun 07 05:12:11 EDT 2015"
-"20150607052102AAgmRr5	","Was Prime KG the best Power Forward in history?","Sports","Would KG from 2002 to 2004 be considered the best PF in NBA history if he had extended that prime a little longer?
-
-He averaged 24 Points, almost 14 Rebounds, 6 Assists, 1.5 Steals and 2 Blocks per game during that time span while playing 40 minutes every game and leading the Timberwolves in all 5 major statistics (Points, Rebounds, Assists, Blocks and Steals per game).","Sun Jun 07 05:21:02 EDT 2015"
-"20150607052553AACJbT5	","I need Help with History Revision?","Arts & Humanities","I need to learn:
-1. How and why people became slaves?
-2. How Africans were taken to the  Americas?
-3. Causes of WW1
-4. The Alliance System
-5. Main events of WW1
-6. Trench Warfare
-7.The Battle of the Somme
-8. Why the Allies won and Germany lost?
-10. What the treaty of Versailles said?
-11. How fair the treaty of Versailles was or wasn&#39;t?","Sun Jun 07 05:25:53 EDT 2015"
-"20150607053313AAN3zxS","Men with mid-length hair is not manly?","Beauty & Style","From timw to time I hear people saying that men with mid-length hair is not a man. That man should have short hair (like guys in the military). Do you agree with that? What makes man being a &quot;man&quot;? If man with mid-length hair is a professional boxer, gentleman with women, knows how the basic of repairing stuff and building, protects his family and dont go back on his words. He&#39;s not a man or manly because of the hairstyle? I don&#39;t think so. What&#39;s you opinion?","Sun Jun 07 05:33:13 EDT 2015"
+qid,answer,question,category,body,date
+"20151115071721AAhyvvq","Ronda Rousey","Ronda Rousey VS. Holly Holm?","Sports","","Sun Nov 15 07:17:21 EST 2015"
