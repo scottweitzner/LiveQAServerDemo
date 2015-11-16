@@ -20,4 +20,7 @@ hs_err_pid*
 /*.xml
 /.classpath
 
+# Mac Files
+.DS_Store
+
 
