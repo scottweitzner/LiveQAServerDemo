@@ -1,2 +1,0 @@
-qid,answer,question,category,body,date
-"20151115071721AAhyvvq","It was awesome to see an arrogant, over confident person like Ronda Rousey get pummeled by a class act like Holly. I think Rousey seriously underestimated Holly Holm. Holm's boxing experience really paid off and that kick was epic. My favorite moment was the wild punch thrown by Rousey that Holm easily dodged. It left Rousey looking confused and punch drunk. Go Holly!!!","Ronda Rousey VS. Holly Holm?","Sports","","Sun Nov 15 07:17:21 EST 2015"
